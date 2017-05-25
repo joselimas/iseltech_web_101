@@ -8,14 +8,19 @@ services:
   sqli-error:
     build: ./sqli/error
     ports:
-     - "5000:5001"
+     - "5001:5000"
 
   sqli-blind:
     build: ./sqli/blind
     ports:
-     - "5000:5002"
+     - "5002:5000"
 
   template-inj:
     build: ./template_inj
     ports:
-     - "5000:5003"
+     - "5003:5000"
+
+  xss:
+    build: ./xss/xss-board
+    ports:
+     - "5004:80"
