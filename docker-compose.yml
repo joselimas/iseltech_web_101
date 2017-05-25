@@ -1,0 +1,21 @@
+version: '2'
+services:
+  sqli-union:
+    build: ./sqli/union
+    ports:
+     - "5000:5000"
+
+  sqli-error:
+    build: ./sqli/error
+    ports:
+     - "5000:5001"
+
+  sqli-blind:
+    build: ./sqli/blind
+    ports:
+     - "5000:5002"
+
+  template-inj:
+    build: ./template_inj
+    ports:
+     - "5000:5003"
