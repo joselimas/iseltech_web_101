@@ -1,3 +1,2 @@
-#! /bin/bash
-node /var/www/public/bot.js >> /tmp/xss-bot.log
-rm /var/www/public/comments/*
+* * * * * node /home/kalax/iseltech/xss-board/bot.js >> /tmp/xss-bot.log
+*/3 * * * * rm /var/www/public/comments/*
