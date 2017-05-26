@@ -21,6 +21,6 @@ services:
      - "5003:5000"
 
   xss:
-    build: ./xss/xss-board
+    build: ./xss-board
     ports:
      - "5004:80"
