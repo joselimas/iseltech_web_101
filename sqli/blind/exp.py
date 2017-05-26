@@ -1,7 +1,7 @@
 from __future__ import print_function
 import requests, sys
-# BASE_URL = "http://192.168.40.132:5002/login"
-BASE_URL = "http://127.0.0.1:5000/login"
+BASE_URL = "http://95.85.49.66:5002/login"
+# BASE_URL = "http://127.0.0.1:5000/login"
 SUCCESS_TEXT = "YEEEEY"
 URL_PARAMS = {'user': None,
               'pass': None}

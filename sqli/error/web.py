@@ -44,7 +44,7 @@ def inj():
     try:
         query = "select * from users where username='%s' and secret='%s'"
         query = query % (request.args.get('user', ''),request.args.get('pass', ''))
-        cur = g.db.execute(query)
+        cur = g.db.executescript(query)
         got = cur.fetchall()
         return redirect('/')
 

