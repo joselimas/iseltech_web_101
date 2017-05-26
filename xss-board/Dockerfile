@@ -2,6 +2,7 @@ FROM nimmis/apache-php5
 RUN apt-get update -y && \
     apt-get install nodejs -y && \
     apt-get install npm -y
+RUN npm install zombie
 COPY . /var/www/public
 WORKDIR /var/www/public
 RUN npm install zombie
