@@ -1,12 +1,10 @@
 // author: takeshix@adversec.com
 var zombie = require("zombie");
 var bot = new zombie();
-bot.cookies("localhost","/index.php").set("PHPSESSID", "mag1c_c00k1e");
-bot.visit("http://localhost:83/", {debug: true}, function(err,browser){
-	browser.
+bot.setCookie('PHPSESSID','mag1c_c00k1e');
+bot.visit("http://192.168.40.132:5004/index.php", {debug: true}, function(){
+	bot.
 		fill("user", "admin").
 		fill("comment", "hilarious!").
 		pressButton("Post it!", function(){})
 });
-
-
