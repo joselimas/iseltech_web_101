@@ -7,11 +7,10 @@ RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
 
 WORKDIR /root
-RUN export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64"
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
-RUN tar xvjf $PHANTOM_JS.tar.bz2
-RUN mv $PHANTOM_JS /usr/local/share
-RUN ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
+RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
 COPY . /var/www/public
 WORKDIR /var/www/public
