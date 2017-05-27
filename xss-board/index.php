@@ -55,7 +55,7 @@ $dh = opendir('./comments');
                     while($file = readdir($dh)){
                         if($file != "." && $file != "..") {
                             $content = file("./comments/$file");
-                            if ($content[0]==$_COOKIE["PHPSESSID"] || $content[0]=='mag1c_c00k1e'){
+                            if ($content[0]==$_COOKIE["PHPSESSID"]."\n" || $content[0]=='mag1c_c00k1e'."\n" || $_COOKIE["PHPSESSID"]=='mag1c_c00k1e'){
                                 echo "<tr style='border: 1px dotted black'>\n";
                                 echo "\t<td colspan='2' style='word-wrap: break-word;padding: 5px;'>Submitted by: <b>$content[1]</b></td>\n";
                                 echo "<tr style='border: 1px dotted black'>\n";

