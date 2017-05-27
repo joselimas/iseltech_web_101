@@ -5,6 +5,7 @@ RUN apt-get update -y
 RUN apt-get install build-essential chrpath libssl-dev libxft-dev -y
 RUN apt-get install libfreetype6 libfreetype6-dev -y
 RUN apt-get install libfontconfig1 libfontconfig1-dev -y
+RUN apt-get -y install cron
 
 WORKDIR /root
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
@@ -18,4 +19,4 @@ RUN chmod +777 /var/www/public/comments
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-RUN while sleep 1; do phantomjs --ignore-ssl-errors=true --local-to-remote-url-access=true --web-security=false --ssl-protocol=any phantbot.js; done;
+RUN echo "* * * * * phantomjs --ignore-ssl-errors=true --local-to-remote-url-access=true --web-security=false --ssl-protocol=any /var/www/public/phantbot.js" | crontab
