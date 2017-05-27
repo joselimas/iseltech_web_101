@@ -68,6 +68,5 @@ $dh = opendir('./comments');
                 ?>
         </table>
     </form>
-//kudos to takeshix@adversec.com for most of the code
 </body>
 </html>
